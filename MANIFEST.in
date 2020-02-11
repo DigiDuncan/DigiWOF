@@ -1,0 +1,3 @@
+include digiwof/data/*.txt
+include digiwof/data/*.json
+include digiwof/data/*.ini
