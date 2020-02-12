@@ -1,14 +1,26 @@
 {
-    "puzzles" : [
-      {
-        "text": "you are what you eat",
-        "category": "Phrase",
-        "round": 2
-      },
-      {
-        "text": "digiduncan",
-        "category": "Person",
-        "round": 1
-      }
-    ]
-  }
+  "rounds" : [
+    {
+      "round": 1,
+      "puzzles": [
+        {
+          "text": "digiduncan",
+          "category": "Person"
+        },
+        {
+          "text": "hair conditioner",
+          "category": "Thing"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "puzzles": [
+        {
+          "text": "you are what you eat",
+          "category": "Phrase"
+        }
+      ]
+    }
+  ]
+}
