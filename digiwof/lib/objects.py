@@ -3,10 +3,13 @@ class Wheel:
         raise NotImplementedError
 
 class Player:
-    raise NotImplementedError
+    def __init__(self, name, id):
+        raise NotImplementedError
 
 class Board:
-    raise NotImplementedError
+    def __init__(self, puzzle):
+        raise NotImplementedError
 
 class Game:
-    raise NotImplementedError
+    def __init__(self, players, puzzles, wheels, prizes):
+        raise NotImplementedError
