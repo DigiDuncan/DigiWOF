@@ -1,99 +1,114 @@
 {
-    "wheels": [
-      {
-        "round": 1,
-        "wedges": [
-          {
-            "value": 0,
-            "special": "bankrupt",
-            "weight": 2,
-            "toggle": false
-          },
-          {
-            "value": 0,
-            "special": "onemillion",
-            "weight": 1,
-            "toggle": false
-          },
-          {
-            "value": 2500,
-            "special": null,
-            "weight": 1,
-            "toggle": false
-          },
-          {
-            "value": 900,
-            "special": null,
-            "weight": 2,
-            "toggle": false
-          },
-          {
-            "value": 700,
-            "special": null,
-            "weight": 3,
-            "toggle": false
-          },
-          {
-            "value": 600,
-            "special": null,
-            "weight": 3,
-            "toggle": false
-          },
-          {
-            "value": 650,
-            "special": null,
-            "weight": 3,
-            "toggle": false
-          },
-          {
-            "value": 500,
-            "special": null,
-            "weight": 2,
-            "toggle": false
-          },
-          {
-            "value": 900,
-            "special": null,
-            "weight": 1,
-            "toggle": false
-          },
-          {
-            "value": 550,
-            "special": null,
-            "weight": 1,
-            "toggle": false
-          },
-          {
-            "value": 0,
-            "special": "loseaturn",
-            "weight": 1,
-            "toggle": false
-          },
-          {
-            "value": 0,
-            "special": "prize",
-            "weight": 1,
-            "toggle": false
-          },
-          {
-            "value": 0,
-            "special": "freeplay",
-            "weight": 1,
-            "toggle": false
-          },
-          {
-            "value": 500,
-            "special": "wild",
-            "weight": 1,
-            "toggle": true
-          },
-          {
-            "value": 500,
-            "special": "gift",
-            "weight": 1,
-            "toggle": true
-          }
-        ]
-      }  
-    ]
-  }
+  "wheels": [
+    {
+      "round": 1,
+      "wedges": [
+        {
+          "value": 0,
+          "weight": 2,
+          "special": "bankrupt"
+        },
+        {
+          "value": 0,
+          "weight": 1,
+          "special": "onemillion"
+        },
+        {
+          "value": 2500,
+          "weight": 1
+        },
+        {
+          "value": 900,
+          "weight": 2
+        },
+        {
+          "value": 700,
+          "weight": 3
+        },
+        {
+          "value": 600,
+          "weight": 3
+        },
+        {
+          "value": 650,
+          "weight": 3
+        },
+        {
+          "value": 500,
+          "weight": 2
+        },
+        {
+          "value": 900,
+          "weight": 1
+        },
+        {
+          "value": 550,
+          "weight": 1
+        },
+        {
+          "value": 0,
+          "weight": 1,
+          "special": "loseaturn"
+        },
+        {
+          "value": 0,
+          "weight": 1,
+          "special": "prize"
+        },
+        {
+          "value": 0,
+          "weight": 1,
+          "special": "freeplay"
+        },
+        {
+          "value": 500,
+          "weight": 1,
+          "special": "wild"
+        },
+        {
+          "value": 500,
+          "weight": 1,
+          "special": "gift"
+        }
+      ]
+    }
+  ],
+  "specials": [
+    {
+      "name": "bankrupt",
+      "toggle": false
+    },
+    {
+      "name": "onemillion",
+      "toggle": false
+    },
+    {
+      "name": "loseaturn",
+      "toggle": false
+    },
+    {
+      "name": "prize",
+      "toggle": false
+    },
+    {
+      "name": "freeplay",
+      "toggle": false
+    },
+    {
+      "name": "wild",
+      "toggle": true
+    },
+    {
+      "name": "gift",
+      "toggle": true
+    },
+    {
+      "name": "halfcar",
+      "toggle": true
+    },
+    {
+      "name": "mystery",
+      "toggle": false
+    }
+  ]
+}
