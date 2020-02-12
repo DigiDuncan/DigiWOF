@@ -6,8 +6,8 @@ class Player:
     def __init__(self, name, id):
         raise NotImplementedError
 
-class Board:
-    def __init__(self, puzzle):
+class Round:
+    def __init__(self, roundtype):
         raise NotImplementedError
 
 class Game:
