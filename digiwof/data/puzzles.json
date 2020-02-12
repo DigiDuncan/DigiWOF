@@ -1,0 +1,14 @@
+{
+    "puzzles" : [
+      {
+        "text": "you are what you eat",
+        "category": "Phrase",
+        "round": 2
+      },
+      {
+        "text": "digiduncan",
+        "category": "Person",
+        "round": 1
+      }
+    ]
+  }

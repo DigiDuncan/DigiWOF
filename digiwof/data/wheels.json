@@ -1,0 +1,84 @@
+{
+    "wheels": [
+      {
+        "round": 1,
+        "wedges": [
+          {
+            "value": 0,
+            "special": "bankrupt",
+            "weight": 2
+          },
+          {
+            "value": 0,
+            "special": "onemillion",
+            "weight": 1
+          },
+          {
+            "value": 2500,
+            "special": null,
+            "weight": 1
+          },
+          {
+            "value": 900,
+            "special": null,
+            "weight": 2
+          },
+          {
+            "value": 700,
+            "special": null,
+            "weight": 3
+          },
+          {
+            "value": 600,
+            "special": null,
+            "weight": 3
+          },
+          {
+            "value": 650,
+            "special": null,
+            "weight": 3
+          },
+          {
+            "value": 500,
+            "special": null,
+            "weight": 2
+          },
+          {
+            "value": 900,
+            "special": null,
+            "weight": 1
+          },
+          {
+            "value": 550,
+            "special": null,
+            "weight": 1
+          },
+          {
+            "value": 0,
+            "special": "loseaturn",
+            "weight": 1
+          },
+          {
+            "value": 0,
+            "special": "prize",
+            "weight": 1
+          },
+          {
+            "value": 0,
+            "special": "freeplay",
+            "weight": 1
+          },
+          {
+            "value": 0,
+            "special": "wild",
+            "weight": 1
+          },
+          {
+            "value": 0,
+            "special": "gift",
+            "weight": 1
+          }
+        ]
+      }  
+    ]
+  }
