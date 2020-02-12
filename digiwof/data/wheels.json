@@ -6,77 +6,92 @@
           {
             "value": 0,
             "special": "bankrupt",
-            "weight": 2
+            "weight": 2,
+            "toggle": false
           },
           {
             "value": 0,
             "special": "onemillion",
-            "weight": 1
+            "weight": 1,
+            "toggle": false
           },
           {
             "value": 2500,
             "special": null,
-            "weight": 1
+            "weight": 1,
+            "toggle": false
           },
           {
             "value": 900,
             "special": null,
-            "weight": 2
+            "weight": 2,
+            "toggle": false
           },
           {
             "value": 700,
             "special": null,
-            "weight": 3
+            "weight": 3,
+            "toggle": false
           },
           {
             "value": 600,
             "special": null,
-            "weight": 3
+            "weight": 3,
+            "toggle": false
           },
           {
             "value": 650,
             "special": null,
-            "weight": 3
+            "weight": 3,
+            "toggle": false
           },
           {
             "value": 500,
             "special": null,
-            "weight": 2
+            "weight": 2,
+            "toggle": false
           },
           {
             "value": 900,
             "special": null,
-            "weight": 1
+            "weight": 1,
+            "toggle": false
           },
           {
             "value": 550,
             "special": null,
-            "weight": 1
+            "weight": 1,
+            "toggle": false
           },
           {
             "value": 0,
             "special": "loseaturn",
-            "weight": 1
+            "weight": 1,
+            "toggle": false
           },
           {
             "value": 0,
             "special": "prize",
-            "weight": 1
+            "weight": 1,
+            "toggle": false
           },
           {
             "value": 0,
             "special": "freeplay",
-            "weight": 1
+            "weight": 1,
+            "toggle": false
           },
           {
-            "value": 0,
+            "value": 500,
             "special": "wild",
-            "weight": 1
+            "weight": 1,
+            "toggle": true
           },
           {
-            "value": 0,
+            "value": 500,
             "special": "gift",
-            "weight": 1
+            "weight": 1,
+            "toggle": true
           }
         ]
       }  
