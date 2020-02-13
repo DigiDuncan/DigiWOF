@@ -1,6 +1,7 @@
 # DigiWOF
 ## Objects
 
+
 ### Wedge
 A Wedge object is a literal wedge on the wheel in the game. There are 24 of these on a Wheel. It also needs to remeber the "state" of some of these Wedges, as certain Wedges can have multiple peristent states.
 
@@ -69,6 +70,7 @@ Merge the Player's `round_tokens` list into their `tokens` list.
 ##### `bankrupt()`
 A shortcut function: set the Player's `round_score` to 0, and clear their `round_tokens` list.
 
+
 ### Board
 The Board represents the physical board in the game: it has a puzzle displayed on it in varying states of reveal. It also stores a category.
 
@@ -87,12 +89,15 @@ True if there are no more vowels in the puzzle that are hidden.
 #### Methods/Functions
 ##### `__init__(self, puzzle: str, category: str)`
 Create a Board with a puzzle and a category.
-##### `try_consonant(c: chr)`
+##### `tryConsonant(c: chr)`
 Add a consonant `c` to the `tried_consonants` list.
-##### `try_vowel(v: chr)`
+##### `tryVowel(v: chr)`
 Add a vowel `v` to the `tried_vowels` list.
 ##### `reveal()`
 Add all possible consonants/vowels to the `tried_consonants` and `tried_vowels` list, essentially revealing the whole puzzle.
+##### `printBoard(linewidth: int)`
+Print the board, with the correct letters revealed, and fitting in a line width of `linewdith`.
+
 
 ### Round
 The Round contains the current Board and the current Wheel.
@@ -109,6 +114,7 @@ The wheel currently being spun this round.
 ##### `__init__(self, round_type: int, wheels: dict, puzzles: dict)`
 Creates a round of `round_type`, and create a wheel that matches that round type by reading the wheels dict and creating a wheel that matches the round type, and creates a Board with a random puzzle (from the puzzles dict) of that round type.
 
+
 ### Game
 ???
 
@@ -118,6 +124,7 @@ Creates a round of `round_type`, and create a wheel that matches that round type
 #### Methods/Functions
 ##### `__init__(self, players, wheels, puzzles, prizes)`<sup>?</sup>
 ???
+
 
 ## Gameplay
 * $1,000 Toss-Up
@@ -134,6 +141,7 @@ Creates a round of `round_type`, and create a wheel that matches that round type
 * \[commerical break\]
 * Bonus Round
 
+
 ## Special Wedges
 ### Backrupt
 Lose all this round tokens and money.
@@ -145,6 +153,7 @@ Is at its face a $1000 wedge, but if the player chooses, they can flip it over f
 Collect two of the 1/2 Car tokens for a car prize.
 ### Wild
 If a Player correctly guess a consonant on the Wedge containing a Wild token, they have three options:
+
 - Use it immediately: this allows them to guess another consonant, and each correct consonant is worth \[wedge value\] + $500.
 - Use it on another turn: this allows them to guess another consonant, and each correct consonant is worth \[wedge value\].
 - Take it to the bonus round: this allows them to guess an extra consonant, on top of the standard three consonants and a vowel.
@@ -153,8 +162,7 @@ Wild cards are edible. <sup>[\[1\]](https://www.youtube.com/watch?v=_HphjRFOHPI)
 ### One Million
 Has either a 2/3 chance of being a Bankrupt, or a 1/3 chance of giving the Player a "million dollar" token on a correct guess. This is taken to the Bonus round and replaces one of the envelopes on the Bonus Wheel with a million-dollar envelope.
 ### Free Play
-Free Play allows Players to call a letter,call a free vowel, or solve the puzzle right
-away, all without penalty. Aside from this, Free Play acts as a $500 wedge and correct consonants are worth $500 each.
+Free Play allows Players to call a letter,call a free vowel, or solve the puzzle right away, all without penalty. Aside from this, Free Play acts as a $500 wedge and correct consonants are worth $500 each.
 ### Gift
 The Gift Tag offers $1,000 towards a company's products, plus $500 per consonant.
 ### Prize
