@@ -2,7 +2,7 @@
 ## Objects
 
 ### Wedge
-A Wedge object is a literal wedge on the wheel in the game. There are 24 of these on a Wheel.
+A Wedge object is a literal wedge on the wheel in the game. There are 24 of these on a Wheel. It also needs to remeber the "state" of some of these Wedges, as certain Wedges can have multiple peristent states.
 
 #### Attributes
 ##### `Wedge.value` (int)
@@ -18,7 +18,7 @@ Turn the special on this wedge off, or, if this was the real game, take the spec
 
 
 ### Wheel
-The goal of the Wheel object is to represent the physical Wheel as seen in the game, which has a variety of Wedges on its face, and a "cursor" to select a Wedge. It also needs to remeber the "state" of some of these Wedges, as certain Wedges can have multiple peristent states.
+The goal of the Wheel object is to represent the physical Wheel as seen in the game, which has a variety of Wedges on its face, and a "cursor" to select a Wedge.
 
 #### Attributes
 ##### `Wheel.cursor` (Wedge)
@@ -95,7 +95,7 @@ Add a vowel `v` to the `tried_vowels` list.
 Add all possible consonants/vowels to the `tried_consonants` and `tried_vowels` list, essentially revealing the whole puzzle.
 
 ### Round
-The Round contains the Board and a Wheel.
+The Round contains the current Board and the current Wheel.
 
 #### Attributes
 ##### `Round.round_type` (int)
