@@ -106,8 +106,8 @@ The board currently being played on this round.
 The wheel currently being spun this round.
 
 #### Methods/Functions
-##### `__init__(self, round_type: int)`
-Creates a round of `round_type`, and gets a Wheel that matches that round type, and creates a Board with a random puzzle of that round type.
+##### `__init__(self, round_type: int, wheels: dict, puzzles: dict)`
+Creates a round of `round_type`, and create a wheel that matches that round type by reading the wheels dict and creating a wheel that matches the round type, and creates a Board with a random puzzle (from the puzzles dict) of that round type.
 
 ### Game
 ???
