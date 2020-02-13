@@ -6,14 +6,14 @@
 * \[interviews\]
 * $2,000 Toss-Up
 * Round 1
-* \[commerical break\]
+* \[commercial break\]
 * Round 2
-* \[commerical break\]
+* \[commercial break\]
 * Round 3
-* \[commerical break\]
+* \[commercial break\]
 * $3,000 Toss-Up
 * Round 4 (Final Spin)
-* \[commerical break\]
+* \[commercial break\]
 * Bonus Round
 
 
@@ -21,23 +21,23 @@
 
 During a normal round, a Player spins the Wheel. Depending on what the land on, multiple things can happen. (See [Special Wedges](#special-wedges).) Assuming the Player lands on a "normal wedge" (one with a dollar value on its face), the player can choose to do one of three things:
 
-* **Guess a consonant**: the player guesses a consonant, and if it's on the board, they recieve [wedge value] x [number of consonants on the board].
+* **Guess a consonant**: the player guesses a consonant, and if it's on the board, they receive [wedge value] x [number of consonants on the board].
 * **Buy a vowel**: the player spends $250 to reveal one of five vowels from the puzzle. (This costs money even if the vowel isn't there.)
-* **Solve the puzzle**: the player guesses the entire puzzle. If they get it right, they walk away with their current round earnings, and the second and third place Players walk away from that roudn with $2000 and $1000, respectively. If they get it worng, they lose their turn.
+* **Solve the puzzle**: the player guesses the entire puzzle. If they get it right, they walk away with their current round earnings, and the second and third place Players walk away from that round with $2000 and $1000, respectively. If they get it wrong, they lose their turn.
 
 
 ### Special Round Types
 #### $1000, $2000, and $3000 Toss-Up (-1, -2, -3)
-The puzzle answer is revealed one letter at a time. Players can buzz in when they think they know the answer. When a Player buzzes in, tehy try to solve. Failing to give a correct answer locks out that Player for the rest of the Toss-Up.
+The puzzle answer is revealed one letter at a time. Players can buzz in when they think they know the answer. When a Player buzzes in, they try to solve. Failing to give a correct answer locks out that Player for the rest of the Toss-Up.
 
 The winner of the $1000 Toss-Up starts Round 1.
 #### Bonus Round (0)
 
-The player with the most money at the end of the game moves on the Bonus Round. They spin the Bonus Wheel, but do not get to see what they landed on. The then solve a short puzzle. To do this, they are given the letters RSTLN and E for free, and they then choose three consonants and a vowel (four consonants if they possess a Wild Card.) They are then given 30 seconds to solve the puzzle, with as many tries as they want. If they solve the puzzle, the prize is revealed and they recieve it. If they fail, the prize is revealed regardless.
+The player with the most money at the end of the game moves on the Bonus Round. They spin the Bonus Wheel, but do not get to see what they landed on. The then solve a short puzzle. To do this, they are given the letters RSTLN and E for free, and they then choose three consonants and a vowel (four consonants if they possess a Wild Card.) They are then given 30 seconds to solve the puzzle, with as many tries as they want. If they solve the puzzle, the prize is revealed and they receive it. If they fail, the prize is revealed regardless.
 
 
 ### Special Wedges
-#### Backrupt
+#### Bankrupt
 Lose all this round tokens and money.
 #### Lose A Turn
 The turn moves on to the next turn.
@@ -56,7 +56,7 @@ Wild cards are edible. <sup>[\[1\]](https://www.youtube.com/watch?v=_HphjRFOHPI)
 #### One Million
 Has either a 2/3 chance of being a Bankrupt, or a 1/3 chance of giving the Player a "million dollar" token on a correct guess. This is taken to the Bonus round and replaces one of the envelopes on the Bonus Wheel with a million-dollar envelope.
 #### Free Play
-Free Play allows Players to call a letter,call a free vowel, or solve the puzzle right away, all without penalty. Aside from this, Free Play acts as a $500 wedge and correct consonants are worth $500 each.
+Free Play allows Players to call a letter, call a free vowel, or solve the puzzle right away, all without penalty. Aside from this, Free Play acts as a $500 wedge and correct consonants are worth $500 each.
 #### Gift
 The Gift Tag offers $1,000 towards a company's products, plus $500 per consonant.
 #### Prize
@@ -75,11 +75,11 @@ This is not planned to be implemented.
 
 
 ### Wedge
-A Wedge object is a literal wedge on the wheel in the game. There are 24 of these on a Wheel. It also needs to remeber the "state" of some of these Wedges, as certain Wedges can have multiple peristent states.
+A Wedge object is a literal wedge on the wheel in the game. There are 24 of these on a Wheel. It also needs to remember the "state" of some of these Wedges, as certain Wedges can have multiple persistent states.
 
 #### Attributes
 ##### `Wedge.value` (int)
-The amount of dollars represented by this wedge, or rather, how much money you will recieve per correct consonant if you are currently on this wedge.
+The amount of dollars represented by this wedge, or rather, how much money you will receive per correct consonant if you are currently on this wedge.
 ##### `Wedge.special` (str?)
 The name of the kind of special wedge this wedge is, if it is one. Might be `None`.
 
@@ -96,11 +96,11 @@ The goal of the Wheel object is to represent the physical Wheel as seen in the g
 #### Attributes
 ##### `Wheel.cursor` (Wedge)
 The Wedge the wheel is currently pointing at.
-##### `Wheel.wedges` (lst)
+##### `Wheel.wedges` (list)
 A list of Wedges the this wheel has on its "face".
 
 #### Methods/Functions
-##### `__init__(self, wedges: lst)`
+##### `__init__(self, wedges: list)`
 The only thing a Wheel needs to exist is its wedges.
 Set the cursor to a random Wedge in `self.wedges` right away.
 ##### `spin()`
@@ -115,13 +115,13 @@ The Player is a person who is playing the game. They keep track of their own tot
 The players name. Very literal.
 ##### `Player.id` (int)
 A unique ID for the player. Shouldn't overlap with any other player. If we're doing a Discord frontend for this, use their Discord ID so you can match up the player to a Discord ID. If you try to add two players with the same ID to a Game, the Game should probably throw an error.
-##### `Player.total_score` (jnt)
+##### `Player.total_score` (int)
 The player's current total score. If the game were to end right now, this is what they'd "walk away" with.
 ##### `Player.round_score` (int)
 The player's running score for the current round.
-##### `Player.tokens` (lst)
+##### `Player.tokens` (list)
 The tokens a player has collected and kept across rounds.
-##### `Player.round_tokens` (lst)
+##### `Player.round_tokens` (list)
 The tokens a player has this round. These would get wiped with a Bankrupt.
 
 #### Methods/Functions
@@ -151,9 +151,9 @@ The Board represents the physical board in the game: it has a puzzle displayed o
 The final, solved puzzle. i.e.: the word(s) that are the solution to this round.
 ##### `Board.category` (str)
 The category of the puzzle on this board.
-##### `Board.tried_consonants` (lst)
+##### `Board.tried_consonants` (list)
 A list of the consonants that have been tried already.
-##### `Board.tried_vowels` (lst)
+##### `Board.tried_vowels` (list)
 A list of the vowels that have been tried already.
 ##### `Board.no_more_vowels` (bool)
 True if there are no more vowels in the puzzle that are hidden.
@@ -168,7 +168,7 @@ Add a vowel `v` to the `tried_vowels` list.
 ##### `reveal()`
 Add all possible consonants/vowels to the `tried_consonants` and `tried_vowels` list, essentially revealing the whole puzzle.
 ##### `printBoard(linewidth: int)`
-Print the board, with the correct letters revealed, and fitting in a line width of `linewdith`.
+Print the board, with the correct letters revealed, and fitting in a line width of `linewidth`.
 
 
 ### Round
@@ -176,7 +176,7 @@ The Round contains the current Board and the current Wheel.
 
 #### Attributes
 ##### `Round.round_type` (int)
-What kind of round this is. Either 1, 2, 3, or 4 for Rounds 1-4, 0 for the Bouns Round, or -1, -2, or -3 for the $1000, $2000, or $3000 Toss-Ups.
+What kind of round this is. Either 1, 2, 3, or 4 for Rounds 1-4, 0 for the Bonus Round, or -1, -2, or -3 for the $1000, $2000, or $3000 Toss-Ups.
 ##### `Round.board` (Board)
 The board currently being played on this round.
 ##### `Round.wheel` (Wheel)
