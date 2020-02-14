@@ -84,9 +84,9 @@ The amount of dollars represented by this wedge, or rather, how much money you w
 The name of the kind of special wedge this wedge is, if it is one. Might be `None`.
 
 #### Methods/Functions
-##### `__init__(self, value: int, special: str)`
+##### `__init__(self, value: int, *, special: str = None, toggleable: bool = None)`
 Initialize a Wedge.
-##### `turnOffSpecial()`
+##### `disableSpecial()`
 Turn the special on this wedge off, or, if this was the real game, take the special token off of this wedge.
 
 
@@ -127,10 +127,6 @@ The tokens a player has this round. These would get wiped with a Bankrupt.
 #### Methods/Functions
 ##### `__init__(self, name: str, id: int)`
 In theory, the only things you should need to make a Player is their name, and a unique ID.
-##### `addTotal(x: int)`
-Add `x` to the Player's `total_score` directly.
-##### `addScore(x: int)`
-Add `x` to the Player's `round_score`. (accepts negatives for subtraction.)
 ##### `mergeScore()`
 Add the Player's `round_score` to their `total_score`.
 ##### `addToken(token: ?)`<sup>*</sup>
@@ -169,22 +165,6 @@ Add a vowel `v` to the `tried_vowels` list.
 Add all possible consonants/vowels to the `tried_consonants` and `tried_vowels` list, essentially revealing the whole puzzle.
 ##### `printBoard(linewidth: int)`
 Print the board, with the correct letters revealed, and fitting in a line width of `linewidth`.
-
-
-### Round
-The Round contains the current Board and the current Wheel.
-
-#### Attributes
-##### `Round.round_type` (int)
-What kind of round this is. Either 1, 2, 3, or 4 for Rounds 1-4, 0 for the Bonus Round, or -1, -2, or -3 for the $1000, $2000, or $3000 Toss-Ups.
-##### `Round.board` (Board)
-The board currently being played on this round.
-##### `Round.wheel` (Wheel)
-The wheel currently being spun this round.
-
-#### Methods/Functions
-##### `__init__(self, round_type: int, wheels: dict, puzzles: dict)`
-Creates a round of `round_type`, and create a wheel that matches that round type by reading the wheels dict and creating a wheel that matches the round type, and creates a Board with a random puzzle (from the puzzles dict) of that round type.
 
 
 ### Game
