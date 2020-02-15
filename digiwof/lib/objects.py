@@ -62,11 +62,7 @@ class Board:
     
     @property
     def no_more_vowels(self):
-        for l in self.puzzle:
-            for v in vowels:
-                if l == v:
-                    return False
-        return True
+        return set(self.puzzle).isdisjoint(vowels)
 
     def tryConsonant(self, c):
         if len(c) != 1:
