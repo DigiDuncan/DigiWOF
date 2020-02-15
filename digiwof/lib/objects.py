@@ -1,5 +1,5 @@
 import random
-from digiwof.constants import consonants, vowels
+from digiwof.lib.constants import consonants, vowels
 
 class Wedge:
     def __init__(self, value: int, *, special: str = None, toggleable: bool = None):
