@@ -127,9 +127,9 @@ class Game:
     def chooseBoard(self, round):
         if round < 0:
             round_type = "toss-up"
-        if round == 0:
+        elif round == 0:
             round_type = "bonus"
-        if 0 < round < 100:
+        elif 0 < round < 100:
             round_type = "normal"
 
         # current_puzzle = random.choice(self.puzzles[]) Get a random puzzle the is a part of the right type.
