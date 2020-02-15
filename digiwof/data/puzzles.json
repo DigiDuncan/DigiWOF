@@ -1,7 +1,7 @@
 {
-  "rounds" : [
+  "types" : [
     {
-      "round": 1,
+      "type": "bonus",
       "puzzles": [
         {
           "text": "digiduncan",
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "round": 2,
+      "type": "normal",
       "puzzles": [
         {
           "text": "you are what you eat",

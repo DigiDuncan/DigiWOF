@@ -9,3 +9,4 @@ font = {
 
 vowels = set("aeiou")
 consonants = set("bcdfghjklmnpqrstvwxyz")
+rounds = [-1, -2, 1, 2, 3 -3, 4, 0, 100]

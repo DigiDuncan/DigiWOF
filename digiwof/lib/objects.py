@@ -1,5 +1,6 @@
 import random
-from digiwof.lib.constants import consonants, vowels
+from typing import Tuple
+from digiwof.lib.constants import consonants, vowels, rounds
 
 class Wedge:
     def __init__(self, value: int, *, special: str = None, toggleable: bool = None):
@@ -85,3 +86,51 @@ class Board:
     def printBoard(self, linewidth):
         # TODO: Print a nice looking board.
         pass
+
+class Game:
+    def __init__(self, id: int, players: Tuple[Player, Player, Player], wheelsJSON: str, puzzlesJSON: str, prizesJSON: str):
+        self.id = id
+        self.players = players
+        self.wheels = self.wheelsFromJSON(wheelsJSON)
+        self.puzzles = self.puzzlesFromJSON(puzzlesJSON)
+        self.prizes = self.prizesFromJSON(prizesJSON)
+
+        self.current_round_index = 0
+        self.current_round = rounds[current_round_index] # Start with the $1000 Toss Up.
+        self.current_board = self.chooseBoard(self.current_round)
+        self.current_wheel = self.getWheel(self.current_round)
+
+    @classmethod
+    def wheelsFromJSON(cls, wheelsJSON):
+        #Make a dictionary of [round: Wheel] from wheels.json.
+        pass
+
+    @classmethod
+    def puzzlesFromJSON(cls, puzzlesJSON):
+        #Make a dictionary of type: value, puzzles: [puzzle: value, category: value] from puzzles.json.
+        pass
+
+    @classmethod
+    def prizesFromJSON(cls, prizesJSON):
+        #Make a dictionary of prize: value from prizes.json.
+        pass
+
+    def nextRound(self):
+        if self.current_round_index != len(rounds) - 1:
+            self.current_round_index += 1
+
+    def getWheel(self, round):
+        round = abs(round)
+        return self.wheels[str(round)]
+
+
+    def chooseBoard(self, round):
+        if round < 0:
+            round_type = "toss-up"
+        if round == 0:
+            round_type = "bonus"
+        if 0 < round < 100:
+            round_type = "normal"
+
+        # current_puzzle = random.choice(self.puzzles[]) Get a random puzzle the is a part of the right type.
+        # return Board(current_puzzle["puzzle"], current_puzzle["category"])
