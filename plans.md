@@ -168,11 +168,36 @@ Print the board, with the correct letters revealed, and fitting in a line width 
 
 
 ### Game
-???
+Represents an entire Game.
 
 #### Attributes
-???
+##### `Game.id` (int)
+A unique ID for this game.
+
+...
 
 #### Methods/Functions
-##### `__init__(self, players, wheels, puzzles, prizes)`<sup>?</sup>
-???
+##### `__init__(self, id: int, players: Tuple[Player, Player, Player], wheelsJSON: str, puzzlesJSON: str, prizesJSON: str)`
+...
+
+...
+
+## Visual Representations
+
+### Main Screen (example)
+![Example of the main screen.](https://cdn.discordapp.com/attachments/658894731623006229/678389354007363604/2020-02-15_18_56_29-Window.png)
+```
+<:blank:665063842866397185><:blank:665063842866397185><:blank:665063842866397185><:blank:665063842866397185>`*** Wheel of Fortune ***`<:blank:665063842866397185><:blank:665063842866397185><:blank:665063842866397185><:blank:665063842866397185>
+⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠
+⬜⁠⬜⁠⬜⁠⬜⁠🇩⁠🟦⁠🟦⁠🟦⁠🇴⁠🟦⁠🇩⁠⬜⁠⬜⁠⬜⁠⬜
+⬜⁠⬜⁠⬜⁠⬜⁠🟦⁠🇴⁠🟦⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜
+⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜
+⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜⁠⬜
+<:blank:665063842866397185><:blank:665063842866397185><:blank:665063842866397185><:blank:665063842866397185><:blank:665063842866397185><:blank:665063842866397185><:blank:665063842866397185>`Category: Thing`<:blank:665063842866397185><:blank:665063842866397185><:blank:665063842866397185><:blank:665063842866397185><:blank:665063842866397185><:blank:665063842866397185><:blank:665063842866397185>
+🟥⁠🟥⁠🟥⁠🟥⁠🟥⁠🟨⁠🟨⁠🟨⁠🟨⁠🟨⁠🟦⁠🟦⁠🟦⁠🟦⁠🟦
+`    Kelly    |    Natalie    |  DigiDuncan  `
+`    $3000    |     $2000     |    $1999     `
+🟥⁠🟥⁠🟥⁠🟥⁠🟥⁠🟨⁠🟨⁠🟨⁠🟨⁠🟨⁠🟦⁠🟦⁠🟦⁠🟦⁠🟦
+`Tried Letters: B|D|E|O|P`
+`Current Wedge: $750`
+```
