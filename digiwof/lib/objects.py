@@ -1,5 +1,9 @@
 import random
+import json
+import importlib.resources as pkg_resources
 from typing import Tuple
+
+import digiwof.data
 from digiwof.lib.constants import consonants, vowels, rounds
 
 class Wedge:
@@ -88,12 +92,12 @@ class Board:
         pass
 
 class Game:
-    def __init__(self, id: int, players: Tuple[Player, Player, Player], wheelsJSON: str, puzzlesJSON: str, prizesJSON: str):
+    def __init__(self, id: int, players: Tuple[Player, Player, Player]):
         self.id = id
         self.players = players
-        self.wheels = self.wheelsFromJSON(wheelsJSON)
-        self.puzzles = self.puzzlesFromJSON(puzzlesJSON)
-        self.prizes = self.prizesFromJSON(prizesJSON)
+        self.wheels = self.wheelsFromJSON()
+        self.puzzles = self.puzzlesFromJSON()
+        self.prizes = self.prizesFromJSON()
 
         self.current_round_index = 0
         self.current_round = rounds[current_round_index] # Start with the $1000 Toss Up.
@@ -101,19 +105,17 @@ class Game:
         self.current_wheel = self.getWheel(self.current_round)
 
     @classmethod
-    def wheelsFromJSON(cls, wheelsJSON):
-        #Make a dictionary of [round: Wheel] from wheels.json.
-        pass  # TODO
+    def wheelsFromJSON(cls):
+        # TODO: Make a dictionary of round: Wheel.
+        data = json.loads(pkg_resources.read_text(digiwof.data, "wheels.json"))
 
     @classmethod
-    def puzzlesFromJSON(cls, puzzlesJSON):
-        #Make a dictionary of type: value, puzzles: [puzzle: value, category: value] from puzzles.json.
-        pass  # TODO
+    def puzzlesFromJSON(cls):
+        return json.loads(pkg_resources.read_text(digiwof.data, "puzzles.json"))
 
     @classmethod
-    def prizesFromJSON(cls, prizesJSON):
-        #Make a dictionary of prize: value from prizes.json.
-        pass  # TODO
+    def prizesFromJSON(cls):
+        return json.loads(pkg_resources.read_text(digiwof.data, "prizes.json"))
 
     def nextRound(self):
         if self.current_round_index != len(rounds) - 1:
@@ -123,7 +125,6 @@ class Game:
         round = abs(round)
         return self.wheels[str(round)]
 
-
     def chooseBoard(self, round):
         if round < 0:
             round_type = "toss-up"
@@ -132,6 +133,5 @@ class Game:
         elif 0 < round < 100:
             round_type = "normal"
 
-        # TODO
-        # current_puzzle = random.choice(self.puzzles[]) Get a random puzzle the is a part of the right type.
-        # return Board(current_puzzle["puzzle"], current_puzzle["category"])
+        current_puzzle = random.choice(self.puzzles[round_type])
+        return Board(current_puzzle["puzzle"], current_puzzle["category"])
