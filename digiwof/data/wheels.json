@@ -1,78 +1,75 @@
 {
-  "wheels": [
-    {
-      "round": 1,
-      "wedges": [
-        {
-          "value": 0,
-          "weight": 2,
-          "special": "bankrupt"
-        },
-        {
-          "value": 0,
-          "weight": 1,
-          "special": "onemillion"
-        },
-        {
-          "value": 2500,
-          "weight": 1
-        },
-        {
-          "value": 900,
-          "weight": 2
-        },
-        {
-          "value": 700,
-          "weight": 3
-        },
-        {
-          "value": 600,
-          "weight": 3
-        },
-        {
-          "value": 650,
-          "weight": 3
-        },
-        {
-          "value": 500,
-          "weight": 2
-        },
-        {
-          "value": 900,
-          "weight": 1
-        },
-        {
-          "value": 550,
-          "weight": 1
-        },
-        {
-          "value": 0,
-          "weight": 1,
-          "special": "loseaturn"
-        },
-        {
-          "value": 0,
-          "weight": 1,
-          "special": "prize"
-        },
-        {
-          "value": 0,
-          "weight": 1,
-          "special": "freeplay"
-        },
-        {
-          "value": 500,
-          "weight": 1,
-          "special": "wild"
-        },
-        {
-          "value": 500,
-          "weight": 1,
-          "special": "gift"
-        }
-      ]
-    }
-  ],
+  "wheels": {
+    "1": [
+      {
+        "value": 0,
+        "weight": 2,
+        "special": "bankrupt"
+      },
+      {
+        "value": 0,
+        "weight": 1,
+        "special": "onemillion"
+      },
+      {
+        "value": 2500,
+        "weight": 1
+      },
+      {
+        "value": 900,
+        "weight": 2
+      },
+      {
+        "value": 700,
+        "weight": 3
+      },
+      {
+        "value": 600,
+        "weight": 3
+      },
+      {
+        "value": 650,
+        "weight": 3
+      },
+      {
+        "value": 500,
+        "weight": 2
+      },
+      {
+        "value": 900,
+        "weight": 1
+      },
+      {
+        "value": 550,
+        "weight": 1
+      },
+      {
+        "value": 0,
+        "weight": 1,
+        "special": "loseaturn"
+      },
+      {
+        "value": 0,
+        "weight": 1,
+        "special": "prize"
+      },
+      {
+        "value": 0,
+        "weight": 1,
+        "special": "freeplay"
+      },
+      {
+        "value": 500,
+        "weight": 1,
+        "special": "wild"
+      },
+      {
+        "value": 500,
+        "weight": 1,
+        "special": "gift"
+      }
+    ]
+  },
   "specials": [
     {
       "name": "bankrupt",

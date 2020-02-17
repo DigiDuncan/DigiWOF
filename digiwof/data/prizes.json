@@ -1,14 +1,14 @@
 {
-    "prizes": [
-        {
-            "name": "a trip to Hawaii",
-            "value": 5000
-        }
-    ],
-    "cars": [
-        {
-            "name": "a Tesla Roadster 2021",
-            "value": 250000
-        }
-    ]
+  "prizes": [
+    {
+      "name": "a trip to Hawaii",
+      "value": 5000
+    }
+  ],
+  "cars": [
+    {
+      "name": "a Tesla Roadster 2021",
+      "value": 250000
+    }
+  ]
 }

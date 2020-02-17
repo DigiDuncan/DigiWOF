@@ -1,26 +1,18 @@
 {
-  "types" : [
+  "bonus" : [
     {
-      "type": "bonus",
-      "puzzles": [
-        {
-          "text": "digiduncan",
-          "category": "Person"
-        },
-        {
-          "text": "hair conditioner",
-          "category": "Thing"
-        }
-      ]
+      "text": "digiduncan",
+      "category": "Person"
     },
     {
-      "type": "normal",
-      "puzzles": [
-        {
-          "text": "you are what you eat",
-          "category": "Phrase"
-        }
-      ]
+      "text": "hair conditioner",
+      "category": "Thing"
+    }
+  ],
+  "normal" : [
+    {
+      "text": "you are what you eat",
+      "category": "Phrase"
     }
   ]
 }
