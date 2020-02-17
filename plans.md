@@ -1,6 +1,8 @@
 # DigiWOF
 ## Gameplay
 
+This section is meant to describe the game play format of the game, but in doing so accidentally is a decent overview of the game *Wheel of Fortune*.
+
 ### Format
 * $1,000 Toss-Up
 * \[interviews\]
@@ -31,9 +33,18 @@ During a normal round, a Player spins the Wheel. Depending on what the land on, 
 The puzzle answer is revealed one letter at a time. Players can buzz in when they think they know the answer. When a Player buzzes in, they try to solve. Failing to give a correct answer locks out that Player for the rest of the Toss-Up.
 
 The winner of the $1000 Toss-Up starts Round 1.
-#### Bonus Round (0)
 
+The winner of the $3000 Toss-Up starts Round 4.
+#### Bonus Round (0)
 The player with the most money at the end of the game moves on the Bonus Round. They spin the Bonus Wheel, but do not get to see what they landed on. The then solve a short puzzle. To do this, they are given the letters RSTLN and E for free, and they then choose three consonants and a vowel (four consonants if they possess a Wild Card.) They are then given 30 seconds to solve the puzzle, with as many tries as they want. If they solve the puzzle, the prize is revealed and they receive it. If they fail, the prize is revealed regardless.
+
+#### Final Spin (4)
+The host spins the wheel once at the beginning of the round. This is the value each consonant will be worth for the entirety of this round.
+Each player's turn, they follow a two-phase process:
+- **Either guessing a consonant or a vowel.** Consonants are worth the round's wedge value, and vowels are free.
+- **Attempting to solve or passing.** There is no penalty for incorrect solves.
+
+The round continues until the puzzle is solved.
 
 
 ### Special Wedges
