@@ -103,17 +103,17 @@ class Game:
     @classmethod
     def wheelsFromJSON(cls, wheelsJSON):
         #Make a dictionary of [round: Wheel] from wheels.json.
-        pass
+        pass  # TODO
 
     @classmethod
     def puzzlesFromJSON(cls, puzzlesJSON):
         #Make a dictionary of type: value, puzzles: [puzzle: value, category: value] from puzzles.json.
-        pass
+        pass  # TODO
 
     @classmethod
     def prizesFromJSON(cls, prizesJSON):
         #Make a dictionary of prize: value from prizes.json.
-        pass
+        pass  # TODO
 
     def nextRound(self):
         if self.current_round_index != len(rounds) - 1:
@@ -132,5 +132,6 @@ class Game:
         elif 0 < round < 100:
             round_type = "normal"
 
+        # TODO
         # current_puzzle = random.choice(self.puzzles[]) Get a random puzzle the is a part of the right type.
         # return Board(current_puzzle["puzzle"], current_puzzle["category"])
