@@ -100,9 +100,13 @@ class Game:
         self.prizes = self.prizesFromJSON()
 
         self.current_round_index = 0
-        self.current_round = rounds[current_round_index] # Start with the $1000 Toss Up.
         self.current_board = self.chooseBoard(self.current_round)
         self.current_wheel = self.getWheel(self.current_round)
+
+    @property
+    def current_round(self):
+        # Start with the $1000 Toss Up.
+        return rounds[self.current_round_index]
 
     @classmethod
     def wheelsFromJSON(cls):
@@ -122,6 +126,7 @@ class Game:
             self.current_round_index += 1
 
     def getWheel(self, round):
+        # Toss-Up rounds are negative values, and use the same wheels as their positive counterparts.
         round = abs(round)
         return self.wheels[str(round)]
 
