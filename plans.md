@@ -3,6 +3,8 @@
 
 This section is meant to describe the game play format of the game, but in doing so accidentally is a decent overview of the game *Wheel of Fortune*.
 
+The goal of Wheel of Fortune is to solve Hangman-style word puzzles to win money.
+
 ### Format
 * $1,000 Toss-Up
 * \[interviews\]
