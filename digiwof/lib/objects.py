@@ -21,7 +21,7 @@ class Wedge:
 
 
 class Wheel:
-    def __init__(self, wedges):
+    def __init__(self, wedges: list):
         self.wedges = wedges
         self.cursor = random.choice(self.wedges)
 
@@ -31,7 +31,7 @@ class Wheel:
 
 class Player:
     __slots__ = ["name", "id", "total_score", "round_score", "tokens", "round_tokens"]
-    def __init__(self, name, id):
+    def __init__(self, name: str, id: int):
         self.name = name
         self.id = id
         self.total_score = 0
@@ -69,14 +69,14 @@ class Board:
     def no_more_vowels(self):
         return set(self.puzzle).isdisjoint(vowels)
 
-    def tryConsonant(self, c):
+    def tryConsonant(self, c: str):
         if len(c) != 1:
             raise ValueError
         if c not in consonants:
             raise ValueError
         self.tried_consonants.append(c)
 
-    def tryVowel(self, v):
+    def tryVowel(self, v: str):
         if len(v) != 1:
             raise ValueError
         if v not in vowels:
@@ -87,7 +87,7 @@ class Board:
         self.tried_consonants = consonants
         self.tried_vowels = vowels
 
-    def printBoard(self, linewidth):
+    def printBoard(self, linewidth: int):
         # TODO: Print a nice looking board.
         pass
 
@@ -97,7 +97,7 @@ class Game:
         self.players = players
         self.wheels = self.wheelsFromJSON()
         self.puzzles = self.puzzlesFromJSON()
-        self.prizes = self.prizesFromJSON()
+        self.prizes, self.cars = self.prizesFromJSON()
 
         self.current_round_index = 0
         self.current_board = self.chooseBoard(self.current_round)
@@ -110,7 +110,7 @@ class Game:
 
     @classmethod
     def wheelsFromJSON(cls):
-        # TODO: Make a dictionary of round: Wheel.
+        # TODO: Make a tuple of Wheels in order.
         data = json.loads(pkg_resources.read_text(digiwof.data, "wheels.json"))
 
     @classmethod
@@ -119,18 +119,19 @@ class Game:
 
     @classmethod
     def prizesFromJSON(cls):
-        return json.loads(pkg_resources.read_text(digiwof.data, "prizes.json"))
+        data = json.loads(pkg_resources.read_text(digiwof.data, "prizes.json"))
+        return (data["prizes"], data["cars"])
 
     def nextRound(self):
         if self.current_round_index != len(rounds) - 1:
             self.current_round_index += 1
 
-    def getWheel(self, round):
+    def getWheel(self, round: int):
         # Toss-Up rounds are negative values, and use the same wheels as their positive counterparts.
         round = abs(round)
-        return self.wheels[str(round)]
+        return self.wheels[round]
 
-    def chooseBoard(self, round):
+    def chooseBoard(self, round: int):
         if round < 0:
             round_type = "toss-up"
         elif round == 0:

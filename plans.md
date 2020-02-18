@@ -184,12 +184,38 @@ Represents an entire Game.
 #### Attributes
 ##### `Game.id` (int)
 A unique ID for this game.
+#### `Game.players` (Tuple[Player, Player, Player])
+A tuple containing the three player objects for this game.
+#### `Game.wheels` (Tuple[Wheel, Wheel, Wheel, Wheel, Wheel])
+A tuple containing the five wheel objects for this game, in the order Bonus, Round 1, Round 2, Round 3, Rpund 4.
+#### `Game.puzzles` (dict)
+A dictionary of lists of dictionaries representing puzzles, according to `puzzles.json`.
+#### `Game.prizes` (dict)
+A dictionary of prize: value.
+#### `Game.cars` (dict)
+A dictionary of car: value.
+#### `Game.current_round_index` (int)
+A zero-indexed integer tat increments every round.
+#### `Game.current_round` (int)
+The round type ID of the current round.
+#### `Game.current_board` (Board)
+The Board object currently in use in the game.
+#### `Game.current_wheel` (Wheel)
+The Wheel object currently in use in the game.
 
-...
-
-#### Methods/Functions
-##### `__init__(self, id: int, players: Tuple[Player, Player, Player], wheelsJSON: str, puzzlesJSON: str, prizesJSON: str)`
-...
+### Methods/Functions
+#### `__init__(self, id: int, players: (Tuple[Player, Player, Player])`
+Start a new Game.
+#### `wheelsFromJSON(cls)`
+#### `puzzlesFromJSON(cls)`
+#### `prizesFromJSON(cls)`
+Converts the `wheels.json`. `puzzles.json`, and `prizes.json` files into usable data.
+#### `nextRound(self)`
+Increments the `Game.current_round_index` if it can.
+#### `getWheel(self, round: int)`
+Returns a Wheel that matches the current round.
+#### `chooseBoard(self, round: int)`
+Returns a Board that matches the current round.
 
 ...
 
