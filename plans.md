@@ -27,7 +27,7 @@ During a normal round, a Player spins the Wheel. Depending on what the land on, 
 
 * **Guess a consonant**: the player guesses a consonant, and if it's on the board, they receive [wedge value] x [number of consonants on the board].
 * **Buy a vowel**: the player spends $250 to reveal one of five vowels from the puzzle. (This costs money even if the vowel isn't there.)
-* **Solve the puzzle**: the player guesses the entire puzzle. If they get it right, they walk away with their current round earnings, and the second and third place Players walk away from that round with $2000 and $1000, respectively. If they get it wrong, they lose their turn.
+* **Solve the puzzle**: the player guesses the entire puzzle. If they get it right, they walk away with their current round earnings. If they get it wrong, they lose their turn.
 
 
 ### Special Round Types
@@ -37,11 +37,12 @@ The puzzle answer is revealed one letter at a time. Players can buzz in when the
 The winner of the $1000 Toss-Up starts Round 1.
 
 The winner of the $3000 Toss-Up starts Round 4.
+
 #### Bonus Round (0)
-The player with the most money at the end of the game moves on the Bonus Round. They spin the Bonus Wheel, but do not get to see what they landed on. The then solve a short puzzle. To do this, they are given the letters RSTLN and E for free, and they then choose three consonants and a vowel (four consonants if they possess a Wild Card.) They are then given 30 seconds to solve the puzzle, with as many tries as they want. If they solve the puzzle, the prize is revealed and they receive it. If they fail, the prize is revealed regardless.
+The player with the most money at the end of the game moves on the Bonus Round. They spin the Bonus Wheel, but do not get to see what they landed on. They then solve a short puzzle. To do this, they are given the letters RSTLN and E for free, and they then choose three consonants and a vowel (four consonants if they possess a Wild Card.) They are then given 30 seconds<sup>1</sup> to solve the puzzle, with as many tries as they want. If they solve the puzzle, the prize is revealed and they receive it. If they fail, the prize is revealed regardless.
 
 #### Final Spin (4)
-The host spins the wheel once at the beginning of the round. This is the value each consonant will be worth for the entirety of this round.
+The host spins the wheel once at the beginning of the round.<sup>2</sup> This plus $1000 is the value each consonant will be worth for the entirety of this round.
 Each player's turn, they follow a two-phase process:
 - **Either guessing a consonant or a vowel.** Consonants are worth the round's wedge value, and vowels are free.
 - **Attempting to solve or passing.** There is no penalty for incorrect solves.
@@ -51,7 +52,7 @@ The round continues until the puzzle is solved.
 
 ### Special Wedges
 #### Bankrupt
-Lose all this round tokens and money.
+Lose all this round's tokens and money.
 #### Lose A Turn
 The turn moves on to the next turn.
 #### Mystery
@@ -110,7 +111,7 @@ The goal of the Wheel object is to represent the physical Wheel as seen in the g
 ##### `Wheel.cursor` (Wedge)
 The Wedge the wheel is currently pointing at.
 ##### `Wheel.wedges` (list)
-A list of Wedges the this wheel has on its "face".
+A list of Wedges that this wheel has on its "face".
 
 #### Methods/Functions
 ##### `__init__(self, wedges: list)`
@@ -239,3 +240,7 @@ Returns a Board that matches the current round.
 `Tried Letters: B|D|E|O|P`
 `Current Wedge: $750`
 ```
+
+# Footnotes
+<sup>1</sup> This may be too long.
+<sup>1</sup> There may be a few spins before the "Final Spin" is done.
