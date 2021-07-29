@@ -34,7 +34,7 @@ During a normal round, a Player spins the Wheel. Depending on what the land on, 
 #### $1000, $2000, and $3000 Toss-Up (-1, -2, -3)
 The puzzle answer is revealed one letter at a time. Players can buzz in when they think they know the answer. When a Player buzzes in, they try to solve. Failing to give a correct answer locks out that Player for the rest of the Toss-Up.
 
-The winner of the $1000 Toss-Up starts Round 1.
+The winner of the $2000 Toss-Up starts Round 1.
 
 The winner of the $3000 Toss-Up starts Round 4.
 
