@@ -51,6 +51,13 @@ tiles = {
     "blue": "<:WOFblue:782496465326440458>"
 }
 
+other_font = {
+    " ": tiles["off"],
+    "*": tiles["off"],
+    "_": tiles["blank"],
+    "#": tiles["on"]
+}
+
 emojis = {
     "pat_thumb": "<a:pat_thumb:782497628305752075>",
     "pat_shake": "<a:pat_shake:782497626779811870>",
