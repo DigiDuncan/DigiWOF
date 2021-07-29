@@ -4,12 +4,14 @@
       {
         "value": 0,
         "weight": 2,
-        "special": "bankrupt"
+        "special": "bankrupt",
+        "toggle": false
       },
       {
         "value": 0,
         "weight": 1,
-        "special": "onemillion"
+        "special": "onemillion",
+        "toggle": false
       },
       {
         "value": 2500,
@@ -46,66 +48,33 @@
       {
         "value": 0,
         "weight": 1,
-        "special": "loseaturn"
+        "special": "loseaturn",
+        "toggle": false
       },
       {
         "value": 0,
         "weight": 1,
-        "special": "prize"
+        "special": "prize",
+        "toggle": false
       },
       {
         "value": 0,
         "weight": 1,
-        "special": "freeplay"
+        "special": "freeplay",
+        "toggle": false
       },
       {
         "value": 500,
         "weight": 1,
-        "special": "wild"
+        "special": "wild",
+        "toggle": true
       },
       {
         "value": 500,
         "weight": 1,
-        "special": "gift"
+        "special": "gift",
+        "toggle": true
       }
     ]
-  },
-  "specials": [
-    {
-      "name": "bankrupt",
-      "toggle": false
-    },
-    {
-      "name": "onemillion",
-      "toggle": false
-    },
-    {
-      "name": "loseaturn",
-      "toggle": false
-    },
-    {
-      "name": "prize",
-      "toggle": false
-    },
-    {
-      "name": "freeplay",
-      "toggle": false
-    },
-    {
-      "name": "wild",
-      "toggle": true
-    },
-    {
-      "name": "gift",
-      "toggle": true
-    },
-    {
-      "name": "halfcar",
-      "toggle": true
-    },
-    {
-      "name": "mystery",
-      "toggle": false
-    }
-  ]
+  }
 }
