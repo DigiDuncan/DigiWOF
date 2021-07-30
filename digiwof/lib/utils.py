@@ -55,7 +55,7 @@ def fit_to_board(phrase: str, *, line_lengths = (12, 14, 14, 12), pad_char = "*"
             padded = {i: line.center(line_lengths[i], pad_char) for i, line in zip(config, fitted)}
             full_padded = [pad_char * line_lengths[i] if i not in config else padded[i] for i in range(len(line_lengths))]
             spaced = [full_padded[i].center(max_row_size, "_") for i in range(len(full_padded))]
-            stripspaced = [s.strip("_") for s in spaced]
+            stripspaced = [s.removesuffix("_") for s in spaced]
             starred = [s.replace(" ", pad_char) for s in stripspaced]
-            return starred
+            return "\n".join(starred)
     return None
