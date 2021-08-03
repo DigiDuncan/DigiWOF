@@ -1,8 +1,9 @@
+import random
+import time
+from typing import List
+
 from digiwof.lib import constants
 from digiwof.lib.utils import fit_to_board
-import random
-from typing import List
-import time
 
 
 class Wedge:
